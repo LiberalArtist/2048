@@ -1,0 +1,8 @@
+((("CFBuncleTypeName"
+   "2048 Game")
+  ("CFBundleTypeRole"
+   "Viewer")
+  ("CFBundleTypeExtensions"
+   (array "2048"))
+  ("CFBundleTypeIconFile" "doc")
+ ))
