@@ -1,5 +1,7 @@
 #lang racket/gui
 
+(module test '#%kernel)
+
 (define f
   (new frame%
        [label "Demo"]))
