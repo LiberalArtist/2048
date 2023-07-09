@@ -3,7 +3,7 @@
 .\#*
 .DS_Store
 compiled/
-/doc/
+/2048/doc/
 scribblings/*.html
 scribblings/*.css
 scribblings/*.js

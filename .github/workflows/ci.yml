@@ -10,20 +10,23 @@ jobs:
       matrix:
         racket-version:
           - "stable"
-          - "current"
           - "7.7"
           - "7.6"
+        experimental: [ false ]
+        include:
+          - racket-version: "current"
+            experimental: true
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
       - name: Install Racket
-        uses: Bogdanp/setup-racket@v1.3.1
+        uses: Bogdanp/setup-racket@v1.10
         with:
           version: ${{ matrix.racket-version }}
           architecture: "x64"
-          distribution: "minimal"
+          distribution: "full"
       - name: Install Package and its Dependencies
-        run: raco pkg install --auto --batch --name $RKT_PKG
+        run: raco pkg install --auto --batch $RKT_PKG/
       - name: Run Tests
         run: raco test -x -p $RKT_PKG
       - name: Check Package Dependencies
