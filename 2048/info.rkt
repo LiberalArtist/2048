@@ -30,3 +30,6 @@
     "scribble-lib"
     "rackunit-lib"
     "rackunit-typed"))
+
+(define license
+  'AGPL-3.0-or-later)
